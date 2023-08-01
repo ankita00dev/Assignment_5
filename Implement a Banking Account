@@ -1,0 +1,16 @@
+class account:
+    def __init__(self,title=None,balance=0):
+        self.title = title
+        self.balance = balance
+        
+class saving_account(account):
+    def __init__(self,title=None,balance=0,interest_rate=0):
+        super().__init__(title,balance)
+        self.interest_rate = interest_rate
+
+    def __str__(self):
+        return f"Account : {self.title} | balance : {self.balance} | interest_rate : {self.interest_rate} "
+
+
+obj = saving_account("Ashish",5000,5)
+print(obj)

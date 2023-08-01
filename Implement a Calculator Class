@@ -1,0 +1,30 @@
+class Calculator:
+    def __init__(self,num1,num2):
+        self.num1 = num1
+        self.num2 = num2
+
+    def addition(self,):
+        self.add = self.num1 + self.num2
+        return self.add 
+
+    def subtract(self):
+        self.sub = self.num1 - self.num2
+        return self.sub
+
+    def multiply(self):
+        self.mul = self.num1 * self.num2
+        return self.mul
+
+    def divide(self):
+        self.div = self.num1 / self.num2
+        return self.div
+
+obj = Calculator(40,6)
+data1 = obj.addition()
+print("Addition : ",data1)
+data2 = obj.subtract()
+print("Subtraction : ",data2)
+data3 = obj.multiply()
+print("Multiplication",data3)
+data4 = obj.divide()
+print("Division : ",data4)

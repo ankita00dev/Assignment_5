@@ -1,0 +1,19 @@
+class student:
+    
+    def set_names(self,name):
+        self.__name = name
+
+    def get_name(self):
+        return self.__name 
+
+    def set_roll_no(self,roll_no):
+        self.__roll_no = roll_no
+
+    def get_roll_no(self):
+        return self.__roll_no
+
+student_obj = student()
+student_obj.set_names("nanacy")
+print(student_obj.get_name()) 
+student_obj.set_roll_no(25)
+print(student_obj.get_roll_no())

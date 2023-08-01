@@ -1,0 +1,13 @@
+class point:
+    def __init__(self,x,y,z):
+        self.x = x
+        self.y = y
+        self.z = z
+
+    def sqSum(self):
+        self.square = self.x*self.x + self.y*self.y + self.z*self.z
+        return self.square
+    
+obj = point(3,4,5)
+result = obj.sqSum()
+print(result)

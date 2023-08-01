@@ -1,0 +1,40 @@
+class account:
+    def __init__(self,amount=None,balance=0):
+        self.amount = amount
+        self.balance = balance 
+    
+    def get_balance(self):
+        return self.balance
+    
+    def deposite(self,amount,balance):
+        self.deposited = amount + balance
+        print("money deposited :",self.deposited)
+        
+    def withdrawl(self,balance,amount):
+        self.a = balance - amount
+        print("amount withdrawl :",self.a)
+
+class saving_amount(account):
+    def __init__(self,amount=None,balance=0,interest_rate=0):
+        super().__init__(amount,balance)
+        self.interest_rate = interest_rate
+
+    def interest_amount(self,interest_rate,balance):
+        self.interestamount = (interest_rate * balance)/100
+        return self.interestamount
+    
+    def __str__(self):
+        return f"amount : {self.amount} \nbalance : {self.balance} \ninterest rate : {self.interest_rate}"
+    
+
+obj = saving_amount(30000,2000,5)
+print(obj)
+
+data1 = obj.get_balance()
+
+data2 = obj.deposite(6000,4000)
+
+data3 = obj.withdrawl(30000,2000)
+
+data4 = obj.interest_amount(5,10000)
+print("interest_amount :",data4)
